@@ -1,0 +1,119 @@
+.bakershops {
+  background-color: $colorCream;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    @extend %h2;
+    color: $lightBrown;
+    margin: 30px auto;
+    text-align: center;
+
+    @include onTablet {
+      font-size: 80px;
+      line-height: 100px;
+    }
+
+    @include onLaptop {
+      font-size: 120px;
+      line-height: 133px;
+    }
+  }
+
+  &__form {
+    width: 288px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    @include onLaptop {
+      flex-direction: row;
+      justify-content: center;
+      width: 750px;
+    }
+  }
+
+  &__select {
+    &--city,
+    &--adress {
+      height: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      width: 100%;
+      opacity: 0.5;
+      max-width: 280px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid $darkBrown;
+      background-color: $colorCream;
+      margin-bottom: 20px;
+    }
+
+    @include onLaptop {
+      flex-direction: row;
+      &--city {
+        width: 173px;
+        margin-right: 42px;
+      }
+
+      &--adress {
+        width: 323px;
+        margin-right: 52px;
+      }
+    }
+  }
+
+  &__button {
+    width: 160px;
+    margin-bottom: 10px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid $colorCream;
+
+    @include onTablet {
+      width: 730px;
+      height: auto;
+    }
+
+    @include onLaptop {
+      width: 100%;
+      margin: 30px auto;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    line-height: 220%;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    &--increase,
+    &--decrease {
+      @include circle (35px);
+      background-color: #fff;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    @include onLaptop {
+      visibility: hidden;
+    }
+  }
+}
