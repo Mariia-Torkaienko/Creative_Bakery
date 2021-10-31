@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  max-width: 170px;
+  line-height: 24px;
+  background-color: $lightBrown;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  text-decoration: none;
+  color: $darkBrown;
+  transition: all 0.5s;
+
+  &:hover {
+    border-color: $lightBrown;
+    background-color: #fff;
+  }
+
+  &:active {
+    background-color: $lightBrown;
+  }
+}

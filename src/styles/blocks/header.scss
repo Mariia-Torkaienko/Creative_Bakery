@@ -1,0 +1,116 @@
+.header {
+  position: relative;
+  padding: 20px 30px;
+  height: 100vh;
+
+  background-image: url(../images/main_1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include onLaptop {
+    background-position-x: -300px;
+    height: 100vh;
+    padding: 0;
+  }
+
+  &__container {
+    @include onLaptop {
+      display: flex;
+      margin: 0;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include onLaptop {
+      padding: 34px 0 0 59px;
+      justify-content: stretch;
+      flex-basis: 66.66%;
+    }
+  }
+
+  &__side {
+    display: flex;
+
+    @include onLaptop {
+      flex-direction: column;
+      height: 100vh;
+      flex-basis: 34%;
+      background-color: $lightBrown;
+      padding-top: 58px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 0;
+  }
+
+  &__menu-opener {
+    display: block;
+    height: 18px;
+    width: 24px;
+    margin-top: 10px;
+
+    background-image: url(../images/burger.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include onLaptop {
+      display: none;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include onTablet {
+      gap: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-family: "Cookie", sans-serif;
+    font-size: 100px;
+    line-height: 80px;
+    font-weight: 400;
+    color: $darkBrown;
+
+    @include onLaptop {
+      font-size: 130px;
+      line-height: 150px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+
+    @include onTablet {
+      font-size: 20px;
+    }
+
+    @include onLaptop {
+      font-size: 26px;
+      line-height: 30px;
+      color: $darkBrown;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 40px;
+    padding: 9px 37px 7px 38px;
+    color: #000;
+  }
+}
